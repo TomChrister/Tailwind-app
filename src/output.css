@@ -996,12 +996,20 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Scaling the content so it simulates a mobile app */
+/* Scaling the content so it simulates a mobile app, for feed page */
+
+@media (min-width: 1024px) {
+  .feed-container {
+    transform: scale(1.3);
+    transform-origin: top center;
+  }
+}
+
+/* For login page */
 
 @media (min-width: 1024px) {
   .container {
-    transform: scale(1);
-    transform-origin: top center;
+    transform: scale(1.3);
   }
 }
 
