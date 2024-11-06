@@ -3,9 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Profile</title>
+    <link href="./src/output.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fe924a0d6e.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="bg-gray-400">
+
+<div class="flex flex-col items-center w-full h-screen">
+    <div class="feed-container container mx-auto flex flex-col w-[450px] rounded-2xl bg-customGray px-5 text-white">
+        <header class="flex justify-between items-center w-full py-4">
+            <svg width="22" height="22" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M46 38C46 39.0609 45.5786 40.0783 44.8284 40.8284C44.0783 41.5786 43.0609 42 42 42H6C4.93913 42 3.92172 41.5786 3.17157 40.8284C2.42143 40.0783 2 39.0609 2 38V16C2 14.9391 2.42143 13.9217 3.17157 13.1716C3.92172 12.4214 4.93913 12 6 12H14L18 6H30L34 12H42C43.0609 12 44.0783 12.4214 44.8284 13.1716C45.5786 13.9217 46 14.9391 46 16V38Z"
+                      stroke="#F3F3F3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M24 34C28.4183 34 32 30.4183 32 26C32 21.5817 28.4183 18 24 18C19.5817 18 16 21.5817 16 26C16 30.4183 19.5817 34 24 34Z"
+                      stroke="#F3F3F3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <a href="feed.html">
+                <p class="font-mono text-xl">Connectly</p>
+            </a>
+            <a href="profile.html">
+                <svg width="22" height="22" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M40 42V38C40 35.8783 39.1571 33.8434 37.6569 32.3431C36.1566 30.8429 34.1217 30 32 30H16C13.8783 30 11.8434 30.8429 10.3431 32.3431C8.84285 33.8434 8 35.8783 8 38V42M32 14C32 18.4183 28.4183 22 24 22C19.5817 22 16 18.4183 16 14C16 9.58172 19.5817 6 24 6C28.4183 6 32 9.58172 32 14Z"
+                          stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </header>
+
+        <div class="flex flex-col justify-items-start bg-customGray2 -mx-5 px-5">
+            <div>
+                <img src="assets/images/profiles/profile6.png" alt="profile-picture" class="border-double border-4 border-sky-500 rounded-full">
+            </div>
+            <div>
+                <p>Ethan Parker</p>
+                <p>@EthanExplorer</p>
+            </div>
+            <div>
+                <button class="bg-blue-500 text-white text-sm py-1.5 px-4 rounded-lg hover:bg-blue-600">Follow</button>
+                <button class="bg-green-800 text-white py-1.5 text-sm px-4 rounded-lg hover:bg-green-600">Message</button>
+            </div>
+
+            <div class="flex gap-7 pb-7">
+                <div class="flex flex-col items-center">
+                    <p class="font-medium">453</p>
+                    <p>Followers</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <p class="font-medium">673</p>
+                    <p>Following</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <p class="font-medium">12</p>
+                    <p>Posts</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-1 place-items-center bg-customGray -mx-5 px-5 pb-16">
+                <img src="assets/images/profilePage/hike.png" alt="picture" class="w-full">
+                <img src="assets/images/profilePage/hike2.png" alt="picture" class="w-full">
+                <img src="assets/images/profilePage/mountain.png" alt="picture" class="w-full">
+                <img src="assets/images/profilePage/top.png" alt="picture" class="w-full">
+                <img src="assets/images/profilePage/stadium.png" alt="picture" class="w-full">
+                <img src="assets/images/profilePage/busy.png" alt="picture" class="w-full">
+                <img src="assets/images/profilePage/boat.png" alt="picture" class="w-full">
+                <img src="assets/images/profilePage/spice.png" alt="picture" class="w-full">
+                <img src="assets/images/profilePage/thailand.png" alt="picture" class="w-full">
+            </div>
+        </div>
+
+        <footer class="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-[450px] flex justify-around items-center bg-white rounded-tl-xl rounded-tr-xl py-3 px-4">
+            <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M39.2 42L26.6 29.4C25.6 30.2 24.45 30.8333 23.15 31.3C21.85 31.7667 20.4667 32 19 32C15.3667 32 12.2917 30.7417 9.775 28.225C7.25833 25.7083 6 22.6333 6 19C6 15.3667 7.25833 12.2917 9.775 9.775C12.2917 7.25833 15.3667 6 19 6C22.6333 6 25.7083 7.25833 28.225 9.775C30.7417 12.2917 32 15.3667 32 19C32 20.4667 31.7667 21.85 31.3 23.15C30.8333 24.45 30.2 25.6 29.4 26.6L42 39.2L39.2 42ZM19 28C21.5 28 23.625 27.125 25.375 25.375C27.125 23.625 28 21.5 28 19C28 16.5 27.125 14.375 25.375 12.625C23.625 10.875 21.5 10 19 10C16.5 10 14.375 10.875 12.625 12.625C10.875 14.375 10 16.5 10 19C10 21.5 10.875 23.625 12.625 25.375C14.375 27.125 16.5 28 19 28Z"
+                      fill="black"/>
+            </svg>
+            <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 44V24H30V44M6 18L24 4L42 18V40C42 41.0609 41.5786 42.0783 40.8284 42.8284C40.0783 43.5786 39.0609 44 38 44H10C8.93913 44 7.92172 43.5786 7.17157 42.8284C6.42143 42.0783 6 41.0609 6 40V18Z"
+                      stroke="#FFAD15" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <i class="fa-solid fa-circle-plus text-3xl" style="color: #134daa;"></i>
+            <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M44 24H32L28 30H20L16 24H4M44 24V36C44 37.0609 43.5786 38.0783 42.8284 38.8284C42.0783 39.5786 41.0609 40 40 40H8C6.93913 40 5.92172 39.5786 5.17157 38.8284C4.42143 38.0783 4 37.0609 4 36V24M44 24L37.1 10.22C36.7688 9.55357 36.2584 8.99274 35.6259 8.60056C34.9935 8.20838 34.2642 8.00039 33.52 8H14.48C13.7358 8.00039 13.0065 8.20838 12.3741 8.60056C11.7417 8.99274 11.2312 9.55357 10.9 10.22L4 24"
+                      stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M41.68 9.21999C40.6585 8.198 39.4456 7.38728 38.1107 6.83416C36.7758 6.28103 35.345 5.99634 33.9 5.99634C32.455 5.99634 31.0242 6.28103 29.6893 6.83416C28.3544 7.38728 27.1415 8.198 26.12 9.21999L24 11.34L21.88 9.21999C19.8166 7.15661 17.0181 5.99741 14.1 5.99741C11.1819 5.99741 8.38338 7.15661 6.31999 9.21999C4.25661 11.2834 3.09741 14.0819 3.09741 17C3.09741 19.9181 4.25661 22.7166 6.31999 24.78L24 42.46L41.68 24.78C42.702 23.7585 43.5127 22.5456 44.0658 21.2107C44.6189 19.8758 44.9036 18.445 44.9036 17C44.9036 15.555 44.6189 14.1242 44.0658 12.7893C43.5127 11.4544 42.702 10.2415 41.68 9.21999Z"
+                      stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </footer>
+    </div>
+</div>
 
 </body>
 </html>
