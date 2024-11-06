@@ -9,7 +9,7 @@ html {
 /* Scaling the content so it simulates a mobile app, for feed page */
 @media (min-width: 1024px) {
     .feed-container {
-        transform: scale(1.3);
+        transform: scale(1);
         transform-origin: top center;
     }
 }
@@ -17,7 +17,7 @@ html {
 /* For login page */
 @media (min-width: 1024px) {
     .container {
-        transform: scale(1.5);
+        transform: scale(1);
     }
 }
 

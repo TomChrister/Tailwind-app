@@ -1055,7 +1055,7 @@ html {
 
 @media (min-width: 1024px) {
   .feed-container {
-    transform: scale(1.3);
+    transform: scale(1);
     transform-origin: top center;
   }
 }
@@ -1064,7 +1064,7 @@ html {
 
 @media (min-width: 1024px) {
   .container {
-    transform: scale(1.5);
+    transform: scale(1);
   }
 }
 
