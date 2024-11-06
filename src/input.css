@@ -9,7 +9,7 @@ html {
 /* Scaling the content so it simulates a mobile app */
 @media (min-width: 1024px) {
     .container {
-        transform: scale(1.5);
+        transform: scale(1);
         transform-origin: top center;
     }
 }
