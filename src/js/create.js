@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const toggle = document.getElementById('toggle');
     const dot = toggle ? toggle.parentNode.querySelector('.dot') : null;
 
-    console.log(toggle); // Check if the toggle element is found
-    console.log(dot); // Check if the dot element is found
+    console.log(toggle);
+    console.log(dot);
 
     if (toggle && dot) {
         toggle.addEventListener('change', () => {
