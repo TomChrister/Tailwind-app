@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feed</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="./src/output.css" rel="stylesheet">
+    <script src="src/js/feed.js" defer></script>
     <script src="https://kit.fontawesome.com/fe924a0d6e.js" crossorigin="anonymous"></script>
 </head>
-
 <body class="bg-gray-400">
 
 <div class="flex flex-col items-center w-full h-screen">
@@ -19,7 +20,7 @@
             </svg>
             <p class="font-mono text-xl">Connectly</p>
             <a href="profile.html">
-                <svg width="22" height="22" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="animate-bounce" width="22" height="22" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M40 42V38C40 35.8783 39.1571 33.8434 37.6569 32.3431C36.1566 30.8429 34.1217 30 32 30H16C13.8783 30 11.8434 30.8429 10.3431 32.3431C8.84285 33.8434 8 35.8783 8 38V42M32 14C32 18.4183 28.4183 22 24 22C19.5817 22 16 18.4183 16 14C16 9.58172 19.5817 6 24 6C28.4183 6 32 9.58172 32 14Z" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </a>
@@ -32,7 +33,7 @@
             </div>
             <div class="border-l border-gray-300 border-opacity-20"></div>
             <div class="flex flex-col items-center">
-                <img src="assets/images/profiles/profile3.png" alt="story" class="w-[60px] max-w-max">
+                <img src="assets/images/profiles/profile13.png" alt="story" class="w-[60px] max-w-max">
                 <p class="text-xs">Tom</p>
             </div>
             <div class="flex flex-col items-center">
@@ -46,12 +47,22 @@
             <div class="flex flex-col items-center">
                 <img src="assets/images/profiles/profile1.png" alt="story" class="w-[60px] max-w-max">
                 <p class="text-xs">Nora</p>
-            </div><div class="flex flex-col items-center">
+            </div>
+            <div class="flex flex-col items-center">
                 <img src="assets/images/profiles/profile7.png" alt="story" class="w-[60px] max-w-max">
                 <p class="text-xs">James</p>
-            </div><div class="flex flex-col items-center">
+            </div>
+            <div class="flex flex-col items-center">
                 <img src="assets/images/profiles/profile8.png" alt="story" class="w-[60px] max-w-max">
                 <p class="text-xs">Conor</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="assets/images/profiles/profile12.png" alt="story" class="w-[60px] max-w-max">
+                <p class="text-xs">Mats</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="assets/images/profiles/profile14.png" alt="story" class="w-[60px] max-w-max">
+                <p class="text-xs">Dave</p>
             </div>
         </div>
 
@@ -63,7 +74,7 @@
             <p class="text-blue-500 font-medium">Follow</p>
         </div>
 
-        <div class="overflow-x-auto flex space-x-4 snap-x snap-mandatory rounded-2xl hide-scrollbar">
+        <div class="slider overflow-x-auto flex space-x-4 snap-x snap-mandatory rounded-2xl hide-scrollbar">
             <div class="min-w-full flex-shrink-0 snap-center">
                 <img src="assets/images/posts/street.jpg" alt="feed image" class="rounded-2xl w-[410px]">
             </div>
@@ -75,11 +86,23 @@
             </div>
         </div>
 
+        <div class="pagination-dots flex justify-center mt-4 space-x-2">
+            <span class="dot w-2 h-2 bg-gray-400 rounded-full"></span>
+            <span class="dot w-2 h-2 bg-gray-400 rounded-full"></span>
+            <span class="dot w-2 h-2 bg-gray-400 rounded-full"></span>
+        </div>
+
         <div>
             <div class="flex justify-between py-4">
-                <div class="flex items-center gap-2">
-                    <i class="fa-regular fa-heart text-red-500"></i>
-                    <p>97 likes</p>
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center gap-1">
+                        <i class="fa-regular fa-heart text-red-500"></i>
+                        <p class="text-sm">97 likes</p>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <i class="fa-regular fa-comment text-green-800"></i>
+                        <p class="text-sm">8 comments</p>
+                    </div>
                 </div>
                 <div>
                     <i class="fa-solid fa-ellipsis-vertical"></i>
@@ -89,7 +112,7 @@
 
         <div class="-mx-5 bg-customGray2 px-5 rounded-t-2xl py-4">
             <div class="flex justify-between items-center">
-                <p>Andy Berg</p>
+                <p>AndyBerg</p>
                 <p class="opacity-45 text-sm">1 hour ago</p>
             </div>
             <div>
@@ -105,7 +128,7 @@
             <p class="text-blue-500 font-medium">Follow</p>
         </div>
 
-        <div class="overflow-x-auto flex space-x-4 snap-x snap-mandatory rounded-2xl hide-scrollbar">
+        <div class="slider overflow-x-auto flex space-x-4 snap-x snap-mandatory rounded-2xl hide-scrollbar">
             <div class="min-w-full flex-shrink-0 snap-center">
                 <img src="assets/images/posts/boats.jpg" alt="feed image" class="rounded-2xl w-[410px]">
             </div>
@@ -114,11 +137,22 @@
             </div>
         </div>
 
+        <div class="pagination-dots flex justify-center mt-4 space-x-2">
+            <span class="dot w-2 h-2 bg-gray-400 rounded-full"></span>
+            <span class="dot w-2 h-2 bg-gray-400 rounded-full"></span>
+        </div>
+
         <div>
             <div class="flex justify-between py-4">
                 <div class="flex items-center gap-2">
-                    <i class="fa-regular fa-heart text-red-500"></i>
-                    <p>126 likes</p>
+                    <div class="flex items-center gap-1">
+                        <i class="fa-regular fa-heart text-red-500"></i>
+                        <p class="text-sm">124 likes</p>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <i class="fa-regular fa-comment text-green-800"></i>
+                        <p class="text-sm">12 comments</p>
+                    </div>
                 </div>
                 <div>
                     <i class="fa-solid fa-ellipsis-vertical"></i>
@@ -128,35 +162,102 @@
 
         <div class="-mx-5 bg-customGray2 px-5 rounded-t-2xl py-4">
             <div class="flex justify-between items-center">
-                <p>Elizabeth Green</p>
+                <p>LizGreen</p>
                 <p class="opacity-45 text-sm">3 hours ago</p>
             </div>
             <div>
-                <p class="opacity-45">Tropical</p>
+                <p class="opacity-45">Love Thailand!</p>
             </div>
         </div>
 
         <div class="flex justify-between items-center pt-5">
             <div class="flex items-center py-3">
-                <img src="assets/images/profiles/profile10.png" alt="profile image" class="w-[40px] pr-1.5">
-                <p>Elizabeth Green</p>
+                <img src="assets/images/profiles/profile12.png" alt="profile image" class="w-[40px] pr-1.5">
+                <p>Mats Olsen</p>
             </div>
             <p class="text-blue-500 font-medium">Follow</p>
         </div>
 
-        <div class="overflow-x-auto flex space-x-4 snap-x snap-mandatory rounded-2xl hide-scrollbar">
+        <div class="slider overflow-x-auto flex space-x-4 snap-x snap-mandatory rounded-2xl hide-scrollbar">
             <div class="min-w-full flex-shrink-0 snap-center">
-                <img src="assets/images/posts/boats.jpg" alt="feed image" class="rounded-2xl w-[410px]">
+                <img src="assets/images/posts/busy.jpg" alt="feed image" class="rounded-2xl w-[410px]">
             </div>
             <div class="min-w-full flex-shrink-0 snap-center">
-                <img src="assets/images/posts/lizard.jpg" alt="feed image" class="rounded-2xl w-[410px]">
+                <img src="assets/images/posts/busy2.png" alt="feed image" class="rounded-2xl w-[410px]">
             </div>
+            <div class="min-w-full flex-shrink-0 snap-center">
+                <img src="assets/images/posts/busy3.png" alt="feed image" class="rounded-2xl w-[410px]">
+            </div>
+        </div>
+
+        <div class="pagination-dots flex justify-center mt-4 space-x-2">
+            <span class="dot w-2 h-2 bg-gray-400 rounded-full"></span>
+            <span class="dot w-2 h-2 bg-gray-400 rounded-full"></span>
+            <span class="dot w-2 h-2 bg-gray-400 rounded-full"></span>
         </div>
 
         <div class="flex justify-between py-4">
             <div class="flex items-center gap-2">
-                <i class="fa-regular fa-heart text-red-500"></i>
-                <p>126 likes</p>
+                <div class="flex items-center gap-1">
+                    <i class="fa-regular fa-heart text-red-500"></i>
+                    <p class="text-sm">89 likes</p>
+                </div>
+                <div class="flex items-center gap-1">
+                    <i class="fa-regular fa-comment text-green-800"></i>
+                    <p class="text-sm">7 comments</p>
+                </div>
+            </div>
+            <div>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+        </div>
+
+        <div class="-mx-5 bg-customGray2 px-5 rounded-t-2xl py-4">
+            <div class="flex justify-between items-center">
+                <p>MatsTravel</p>
+                <p class="opacity-45 text-sm">5 hours ago</p>
+            </div>
+            <div>
+                <p class="opacity-45">Busy streets full of life!</p>
+            </div>
+        </div>
+
+        <div class="flex justify-between items-center pt-5">
+            <div class="flex items-center py-3">
+                <img src="assets/images/profiles/profile11.png" alt="profile image" class="w-[40px] pr-1.5">
+                <p>Vivian Phillips</p>
+            </div>
+            <p class="text-blue-500 font-medium">Follow</p>
+        </div>
+
+        <div class="slider overflow-x-auto flex space-x-4 snap-x snap-mandatory rounded-2xl hide-scrollbar">
+            <div class="min-w-full flex-shrink-0 snap-center">
+                <img src="assets/images/posts/tram.jpg" alt="feed image" class="rounded-2xl w-[410px]">
+            </div>
+            <div class="min-w-full flex-shrink-0 snap-center">
+                <img src="assets/images/posts/building.jpg" alt="feed image" class="rounded-2xl w-[410px]">
+            </div>
+            <div class="min-w-full flex-shrink-0 snap-center">
+                <img src="assets/images/posts/church.jpg" alt="feed image" class="rounded-2xl w-[410px]">
+            </div>
+        </div>
+
+        <div class="pagination-dots flex justify-center mt-4 space-x-2">
+            <span class="dot w-2 h-2 bg-gray-400 rounded-full"></span>
+            <span class="dot w-2 h-2 bg-gray-400 rounded-full"></span>
+            <span class="dot w-2 h-2 bg-gray-400 rounded-full"></span>
+        </div>
+
+        <div class="flex justify-between py-4">
+            <div class="flex items-center gap-2">
+                <div class="flex items-center gap-1">
+                    <i class="fa-regular fa-heart text-red-500"></i>
+                    <p class="text-sm">76 likes</p>
+                </div>
+                <div class="flex items-center gap-1">
+                    <i class="fa-regular fa-comment text-green-800"></i>
+                    <p class="text-sm">6 comments</p>
+                </div>
             </div>
             <div>
                 <i class="fa-solid fa-ellipsis-vertical"></i>
@@ -165,11 +266,11 @@
 
         <div class="-mx-5 bg-customGray2 px-5 rounded-t-2xl py-4 mb-[52px]">
             <div class="flex justify-between items-center">
-                <p>Elizabeth Green</p>
-                <p class="opacity-45 text-sm">3 hours ago</p>
+                <p>VPhillips</p>
+                <p class="opacity-45 text-sm">8 hours ago</p>
             </div>
             <div>
-                <p class="opacity-45">Tropical</p>
+                <p class="opacity-45">This city is absolutely beautiful!</p>
             </div>
         </div>
 
@@ -180,7 +281,9 @@
             <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M18 44V24H30V44M6 18L24 4L42 18V40C42 41.0609 41.5786 42.0783 40.8284 42.8284C40.0783 43.5786 39.0609 44 38 44H10C8.93913 44 7.92172 43.5786 7.17157 42.8284C6.42143 42.0783 6 41.0609 6 40V18Z" stroke="#FFAD15" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <i class="fa-solid fa-circle-plus text-3xl" style="color: #134daa;"></i>
+            <a href="create.html">
+                <i class="fa-solid fa-circle-plus text-3xl animate-bounce" style="color: #134daa;"></i>
+            </a>
             <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M44 24H32L28 30H20L16 24H4M44 24V36C44 37.0609 43.5786 38.0783 42.8284 38.8284C42.0783 39.5786 41.0609 40 40 40H8C6.93913 40 5.92172 39.5786 5.17157 38.8284C4.42143 38.0783 4 37.0609 4 36V24M44 24L37.1 10.22C36.7688 9.55357 36.2584 8.99274 35.6259 8.60056C34.9935 8.20838 34.2642 8.00039 33.52 8H14.48C13.7358 8.00039 13.0065 8.20838 12.3741 8.60056C11.7417 8.99274 11.2312 9.55357 10.9 10.22L4 24" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>

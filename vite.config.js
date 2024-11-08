@@ -11,6 +11,7 @@ export default defineConfig({
                 main: resolve (__dirname, 'index.html'),
                 feed: resolve (__dirname, 'feed.html'),
                 profile: resolve (__dirname, 'profile.html'),
+                create: resolve (__dirname, 'create.html'),
             },
         },
     },
