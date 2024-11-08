@@ -6,6 +6,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 /* Scaling the content so it simulates a mobile app, for feed page */
 @media (min-width: 1024px) {
     .feed-container {
