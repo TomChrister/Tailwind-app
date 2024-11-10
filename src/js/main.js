@@ -1,3 +1,5 @@
+import '../input.css'
+
 const sliders = document.querySelectorAll('.slider');
 
 sliders.forEach((slider) => {

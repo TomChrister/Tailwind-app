@@ -6,7 +6,7 @@
     <title>Create Post</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="./src/output.css" rel="stylesheet">
-    <script></script>
+    <script src="src/js/main.js" defer></script>
     <script src="https://kit.fontawesome.com/fe924a0d6e.js" crossorigin="anonymous"></script>
 </head>
 <body class="bg-gray-400">
@@ -15,7 +15,7 @@
     <div class="container mx-auto flex flex-col w-[450px] max-w-full sm:w-[450px] rounded-2xl bg-customGray text-white font-sans">
         <header class="flex justify-between items-center w-full py-4 px-5">
             <a href="feed.html">
-                <i class="fa-solid fa-arrow-left"></i>
+                <i class="fa-solid fa-arrow-left animate-bounce"></i>
             </a>
             <p class="font-mono text-xl">New post</p>
             <p class="text-blue-600">Share</p>
@@ -44,13 +44,10 @@
             <p class="py-4">Add soundtrack</p>
             <i class="fa-solid fa-chevron-right"></i>
         </div>
-        <div class="flex justify-between items-center px-5 border-b border-gray-200 border-opacity-20">
+        <div class="flex justify-between items-center px-5 pb-16 border-b border-gray-200 border-opacity-20">
             <p class="py-4 pb-6">Advanced settings</p>
             <i class="fa-solid fa-chevron-right"></i>
         </div>
-
-        <mdui-switch></mdui-switch>
-
 
         <footer class="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full sm:w-[450px] flex justify-around items-center bg-white rounded-tl-xl rounded-tr-xl py-5 px-4">
             <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
