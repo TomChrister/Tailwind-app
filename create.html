@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="./src/output.css" rel="stylesheet">
+    <script src="src/js/main.js" defer></script>
+    <script src="https://kit.fontawesome.com/fe924a0d6e.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-400">
+
+<div class="flex flex-col items-center w-full h-screen">
+    <div class="container mx-auto flex flex-col w-[450px] max-w-full sm:w-[450px] rounded-2xl bg-customGray text-white font-sans">
+        <header class="flex justify-between items-center w-full py-4 px-5">
+            <a href="feed.html">
+                <i class="fa-solid fa-arrow-left animate-bounce"></i>
+            </a>
+            <p class="font-mono text-xl">New post</p>
+            <p class="text-blue-600">Share</p>
+        </header>
+
+        <div class="py-5 bg-customGray2 flex justify-start px-5 gap-3">
+            <div>
+                <img src="assets/images/posts/thailand.png" alt="" class="w-[54px]">
+            </div>
+            <div>
+                <label for="description"></label>
+                <input id="description" type="text" placeholder="Write a description..."
+                       class="bg-customGray2 focus:outline-none">
+            </div>
+        </div>
+
+        <div class="flex justify-between items-center px-5 border-b border-gray-200 border-opacity-20">
+            <p class="py-4">Tag people</p>
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div class="flex justify-between items-center px-5 border-b border-gray-200 border-opacity-20">
+            <p class="py-4">Add location</p>
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div class="flex justify-between items-center px-5 border-b border-gray-200 border-opacity-20">
+            <p class="py-4">Add soundtrack</p>
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div class="flex justify-between items-center px-5 pb-16 border-b border-gray-200 border-opacity-20">
+            <p class="py-4 pb-6">Advanced settings</p>
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+
+        <footer class="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full sm:w-[450px] flex justify-around items-center bg-white rounded-tl-xl rounded-tr-xl py-5 px-4">
+            <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M39.2 42L26.6 29.4C25.6 30.2 24.45 30.8333 23.15 31.3C21.85 31.7667 20.4667 32 19 32C15.3667 32 12.2917 30.7417 9.775 28.225C7.25833 25.7083 6 22.6333 6 19C6 15.3667 7.25833 12.2917 9.775 9.775C12.2917 7.25833 15.3667 6 19 6C22.6333 6 25.7083 7.25833 28.225 9.775C30.7417 12.2917 32 15.3667 32 19C32 20.4667 31.7667 21.85 31.3 23.15C30.8333 24.45 30.2 25.6 29.4 26.6L42 39.2L39.2 42ZM19 28C21.5 28 23.625 27.125 25.375 25.375C27.125 23.625 28 21.5 28 19C28 16.5 27.125 14.375 25.375 12.625C23.625 10.875 21.5 10 19 10C16.5 10 14.375 10.875 12.625 12.625C10.875 14.375 10 16.5 10 19C10 21.5 10.875 23.625 12.625 25.375C14.375 27.125 16.5 28 19 28Z"
+                      fill="black"/>
+            </svg>
+            <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 44V24H30V44M6 18L24 4L42 18V40C42 41.0609 41.5786 42.0783 40.8284 42.8284C40.0783 43.5786 39.0609 44 38 44H10C8.93913 44 7.92172 43.5786 7.17157 42.8284C6.42143 42.0783 6 41.0609 6 40V18Z"
+                      stroke="#FFAD15" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <i class="fa-solid fa-circle-plus text-3xl" style="color: #134daa;"></i>
+            <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M44 24H32L28 30H20L16 24H4M44 24V36C44 37.0609 43.5786 38.0783 42.8284 38.8284C42.0783 39.5786 41.0609 40 40 40H8C6.93913 40 5.92172 39.5786 5.17157 38.8284C4.42143 38.0783 4 37.0609 4 36V24M44 24L37.1 10.22C36.7688 9.55357 36.2584 8.99274 35.6259 8.60056C34.9935 8.20838 34.2642 8.00039 33.52 8H14.48C13.7358 8.00039 13.0065 8.20838 12.3741 8.60056C11.7417 8.99274 11.2312 9.55357 10.9 10.22L4 24"
+                      stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M41.68 9.21999C40.6585 8.198 39.4456 7.38728 38.1107 6.83416C36.7758 6.28103 35.345 5.99634 33.9 5.99634C32.455 5.99634 31.0242 6.28103 29.6893 6.83416C28.3544 7.38728 27.1415 8.198 26.12 9.21999L24 11.34L21.88 9.21999C19.8166 7.15661 17.0181 5.99741 14.1 5.99741C11.1819 5.99741 8.38338 7.15661 6.31999 9.21999C4.25661 11.2834 3.09741 14.0819 3.09741 17C3.09741 19.9181 4.25661 22.7166 6.31999 24.78L24 42.46L41.68 24.78C42.702 23.7585 43.5127 22.5456 44.0658 21.2107C44.6189 19.8758 44.9036 18.445 44.9036 17C44.9036 15.555 44.6189 14.1242 44.0658 12.7893C43.5127 11.4544 42.702 10.2415 41.68 9.21999Z"
+                      stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </footer>
+    </div>
+</div>
+
+
+</body>
+</html>
