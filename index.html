@@ -3,60 +3,320 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Feed</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="./src/output.css" rel="stylesheet">
-    <script src="src/js/main.js" defer></script>
+    <script src="src/js/main.js" defer type="module"></script>
     <script src="https://kit.fontawesome.com/fe924a0d6e.js" crossorigin="anonymous"></script>
 </head>
-<body class="bg-gradient-to-r from-pink-300 to-blue-400">
+<body class="bg-gray-400">
 
-<div class="flex justify-center items-center w-full h-screen">
-    <div class="container mx-auto bg-white flex flex-col items-center justify-center rounded-md w-[450px] h-[700px] shadow-lg max-w-[372px] max-h-[600px]">
-        <h1 class="text-3xl font-bold font-mono pb-6">Login</h1>
-        <div class="w-full px-12">
-            <form action="feed.html">
-                <div>
-                    <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
-                    <div class="relative">
-                        <span class="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-400">
-                            <i class="fa-solid fa-user"></i>
-                        </span>
-                        <input id="username" type="text" placeholder="Type your username" minlength="3" class="block w-full border-b border-gray-400 py-1.5 pl-10 text-gray-900 focus:border-blue-500 outline-none">
-                    </div>
-                </div>
+<div class="flex flex-col items-center w-full h-screen">
+    <div class="feed-container container mx-auto flex flex-col w-[450px] max-w-full sm:w-[450px] rounded-2xl bg-customGray px-5 text-white">
+        <header class="flex justify-between items-center w-full py-4">
+            <svg width="22" height="22" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M46 38C46 39.0609 45.5786 40.0783 44.8284 40.8284C44.0783 41.5786 43.0609 42 42 42H6C4.93913 42 3.92172 41.5786 3.17157 40.8284C2.42143 40.0783 2 39.0609 2 38V16C2 14.9391 2.42143 13.9217 3.17157 13.1716C3.92172 12.4214 4.93913 12 6 12H14L18 6H30L34 12H42C43.0609 12 44.0783 12.4214 44.8284 13.1716C45.5786 13.9217 46 14.9391 46 16V38Z"
+                      stroke="#F3F3F3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M24 34C28.4183 34 32 30.4183 32 26C32 21.5817 28.4183 18 24 18C19.5817 18 16 21.5817 16 26C16 30.4183 19.5817 34 24 34Z"
+                      stroke="#F3F3F3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <div class="flex items-center gap-1">
+                <p class="font-mono text-xl">Connectly</p>
+                <i class="fa-brands fa-connectdevelop text-yellow-400"></i>
+            </div>
+            <a href="profile.html">
+                <svg class="animate-bounce" width="22" height="22" viewBox="0 0 48 48" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M40 42V38C40 35.8783 39.1571 33.8434 37.6569 32.3431C36.1566 30.8429 34.1217 30 32 30H16C13.8783 30 11.8434 30.8429 10.3431 32.3431C8.84285 33.8434 8 35.8783 8 38V42M32 14C32 18.4183 28.4183 22 24 22C19.5817 22 16 18.4183 16 14C16 9.58172 19.5817 6 24 6C28.4183 6 32 9.58172 32 14Z"
+                          stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </header>
 
-                <div class="pt-6">
-                    <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
-                    <div class="relative">
-                        <span class="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-400">
-                            <i class="fa-solid fa-lock"></i>
-                        </span>
-                        <input id="password" type="password" placeholder="Type your password" minlength="8" class="block w-full border-b border-gray-400 py-1.5 pl-10 text-gray-900 focus:border-blue-500 outline-none">
-                    </div>
-                </div>
-
-                <div class="pt-2 pb-4">
-                    <p class="text-right text-gray-400">Forgot password?</p>
-                </div>
-
-                <div class="py-4">
-                    <a href="feed.html">
-                        <button type="submit" class="flex w-full h-8 justify-center items-center rounded-xl text-white bg-blue-400 hover:bg-blue-500 focus:outline-none">
-                            LOGIN
-                        </button>
-                    </a>
-                </div>
-            </form>
-        </div>
-
-        <div class="pt-4">
-            <p class="text-gray-400">Or sign up using</p>
-            <div class="flex justify-between gap-2.5 py-4">
-                <img src="assets/images/icons/facebook.svg" alt="facebook" class="w-[36px] hover:cursor-pointer">
-                <img src="assets/images/icons/google.svg" alt="google" class="w-[36px] hover:cursor-pointer">
-                <img src="assets/images/icons/X.svg" alt="X" class="w-[36px] hover:cursor-pointer">
+        <div class="-mx-5 px-5 bg-customGray2 flex justify-between py-3 hide-scrollbar overflow-x-auto gap-7">
+            <div class="flex flex-col items-center">
+                <img src="assets/images/profiles/story.png" alt="story" class="w-[60px] max-w-max">
+                <p class="text-xs">Your story</p>
+            </div>
+            <div class="border-l border-gray-300 border-opacity-20"></div>
+            <div class="flex flex-col items-center">
+                <img src="assets/images/profiles/profile13.png" alt="story" class="w-[60px] max-w-max">
+                <p class="text-xs">Tom</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="assets/images/profiles/profile10.png" alt="story" class="w-[60px] max-w-max">
+                <p class="text-xs">Elizabeth</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="assets/images/profiles/profile9.png" alt="story" class="w-[60px] max-w-max">
+                <p class="text-xs">David</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="assets/images/profiles/profile1.png" alt="story" class="w-[60px] max-w-max">
+                <p class="text-xs">Nora</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="assets/images/profiles/profile7.png" alt="story" class="w-[60px] max-w-max">
+                <p class="text-xs">James</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="assets/images/profiles/profile8.png" alt="story" class="w-[60px] max-w-max">
+                <p class="text-xs">Conor</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="assets/images/profiles/profile12.png" alt="story" class="w-[60px] max-w-max">
+                <p class="text-xs">Mats</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="assets/images/profiles/profile14.png" alt="story" class="w-[60px] max-w-max">
+                <p class="text-xs">Dave</p>
             </div>
         </div>
+
+        <div class="flex justify-between items-center">
+            <div class="flex items-center py-3">
+                <img src="assets/images/profiles/profile6.png" alt="profile image" class="w-[54px] pr-1.5">
+                <div class="leading-5">
+                    <p class="text-sm">Andy Berg</p>
+                    <p class="opacity-30 text-white text-sm">Tokyo, Japan</p>
+                </div>
+            </div>
+            <p class="text-blue-500 font-medium">Follow</p>
+        </div>
+
+        <div class="slider overflow-x-auto flex space-x-4 snap-x snap-mandatory rounded-2xl hide-scrollbar">
+            <div class="min-w-full flex-shrink-0 snap-center">
+                <img src="assets/images/posts/street.jpg" alt="feed image" class="rounded-2xl w-[410px]">
+            </div>
+            <div class="min-w-full flex-shrink-0 snap-center">
+                <img src="assets/images/posts/cafe.jpg" alt="feed image" class="rounded-2xl w-[410px]">
+            </div>
+            <div class="min-w-full flex-shrink-0 snap-center">
+                <img src="assets/images/posts/underground.jpg" alt="feed image" class="rounded-2xl w-[410px]">
+            </div>
+        </div>
+
+        <div class="pagination-dots flex justify-center mt-4 space-x-2">
+            <span class="dot w-2 h-2 bg-gray-400 rounded-full"></span>
+            <span class="dot w-2 h-2 bg-gray-400 rounded-full"></span>
+            <span class="dot w-2 h-2 bg-gray-400 rounded-full"></span>
+        </div>
+
+        <div>
+            <div class="flex justify-between py-2">
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center gap-1">
+                        <i class="fa-regular fa-heart text-red-500"></i>
+                        <p class="text-sm">97 likes</p>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <i class="fa-regular fa-comment text-green-800"></i>
+                        <p class="text-sm">8 comments</p>
+                    </div>
+                </div>
+                <div>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="-mx-5 bg-customGray2 px-5 rounded-t-2xl py-4">
+            <div class="flex justify-between items-center">
+                <p>AndyBerg</p>
+                <p class="opacity-45 text-sm">1 hour ago</p>
+            </div>
+            <div>
+                <p class="opacity-45">Pictures from this weekend's trip </p>
+            </div>
+        </div>
+
+        <div class="flex justify-between items-center pt-5">
+            <div class="flex items-center py-3">
+                <img src="assets/images/profiles/profile10.png" alt="profile image" class="w-[54px] pr-1.5">
+                <div class="leading-5">
+                    <p class="text-sm">Elizabeth Green</p>
+                    <p class="opacity-30 text-white text-sm">Ko Samiu, Thailand</p>
+                </div>
+            </div>
+            <p class="text-blue-500 font-medium">Follow</p>
+        </div>
+
+        <div class="slider overflow-x-auto flex space-x-4 snap-x snap-mandatory rounded-2xl hide-scrollbar">
+            <div class="min-w-full flex-shrink-0 snap-center">
+                <img src="assets/images/posts/boats.jpg" alt="feed image" class="rounded-2xl w-[410px]">
+            </div>
+            <div class="min-w-full flex-shrink-0 snap-center">
+                <img src="assets/images/posts/lizard.jpg" alt="feed image" class="rounded-2xl w-[410px]">
+            </div>
+        </div>
+
+        <div class="pagination-dots flex justify-center mt-4 space-x-2">
+            <span class="dot w-2 h-2 bg-gray-400 rounded-full"></span>
+            <span class="dot w-2 h-2 bg-gray-400 rounded-full"></span>
+        </div>
+
+        <div>
+            <div class="flex justify-between py-2">
+                <div class="flex items-center gap-2">
+                    <div class="flex items-center gap-1">
+                        <i class="fa-regular fa-heart text-red-500"></i>
+                        <p class="text-sm">124 likes</p>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <i class="fa-regular fa-comment text-green-800"></i>
+                        <p class="text-sm">12 comments</p>
+                    </div>
+                </div>
+                <div>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="-mx-5 bg-customGray2 px-5 rounded-t-2xl py-4">
+            <div class="flex justify-between items-center">
+                <p>LizGreen</p>
+                <p class="opacity-45 text-sm">3 hours ago</p>
+            </div>
+            <div>
+                <p class="opacity-45">Love Thailand!</p>
+            </div>
+        </div>
+
+        <div class="flex justify-between items-center pt-5">
+            <div class="flex items-center py-3">
+                <img src="assets/images/profiles/profile12.png" alt="profile image" class="w-[54px] pr-1.5">
+                <div class="leading-5">
+                    <p class="text-sm">Mats Olsen</p>
+                    <p class="opacity-30 text-white text-sm">Mumbai, India</p>
+                </div>
+            </div>
+            <p class="text-blue-500 font-medium">Follow</p>
+        </div>
+
+        <div class="slider overflow-x-auto flex space-x-4 snap-x snap-mandatory rounded-2xl hide-scrollbar">
+            <div class="min-w-full flex-shrink-0 snap-center">
+                <img src="assets/images/posts/busy.jpg" alt="feed image" class="rounded-2xl w-[410px]">
+            </div>
+            <div class="min-w-full flex-shrink-0 snap-center">
+                <img src="assets/images/posts/busy2.png" alt="feed image" class="rounded-2xl w-[410px]">
+            </div>
+            <div class="min-w-full flex-shrink-0 snap-center">
+                <img src="assets/images/posts/busy3.png" alt="feed image" class="rounded-2xl w-[410px]">
+            </div>
+        </div>
+
+        <div class="pagination-dots flex justify-center mt-4 space-x-2">
+            <span class="dot w-2 h-2 bg-gray-400 rounded-full"></span>
+            <span class="dot w-2 h-2 bg-gray-400 rounded-full"></span>
+            <span class="dot w-2 h-2 bg-gray-400 rounded-full"></span>
+        </div>
+
+        <div class="flex justify-between py-2">
+            <div class="flex items-center gap-2">
+                <div class="flex items-center gap-1">
+                    <i class="fa-regular fa-heart text-red-500"></i>
+                    <p class="text-sm">89 likes</p>
+                </div>
+                <div class="flex items-center gap-1">
+                    <i class="fa-regular fa-comment text-green-800"></i>
+                    <p class="text-sm">7 comments</p>
+                </div>
+            </div>
+            <div>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+        </div>
+
+        <div class="-mx-5 bg-customGray2 px-5 rounded-t-2xl py-4">
+            <div class="flex justify-between items-center">
+                <p>MatsTravel</p>
+                <p class="opacity-45 text-sm">5 hours ago</p>
+            </div>
+            <div>
+                <p class="opacity-45">Busy streets full of life!</p>
+            </div>
+        </div>
+
+        <div class="flex justify-between items-center pt-5">
+            <div class="flex items-center py-3">
+                <img src="assets/images/profiles/profile11.png" alt="profile image" class="w-[54px] pr-1.5">
+                <div class="leading-5">
+                    <p class="text-sm">Vivian Phillips</p>
+                    <p class="opacity-30 text-white text-sm">Krakow, Poland</p>
+                </div>
+            </div>
+            <p class="text-blue-500 font-medium">Follow</p>
+        </div>
+
+        <div class="slider overflow-x-auto flex space-x-4 snap-x snap-mandatory rounded-2xl hide-scrollbar">
+            <div class="min-w-full flex-shrink-0 snap-center">
+                <img src="assets/images/posts/tram.jpg" alt="feed image" class="rounded-2xl w-[410px]">
+            </div>
+            <div class="min-w-full flex-shrink-0 snap-center">
+                <img src="assets/images/posts/building.jpg" alt="feed image" class="rounded-2xl w-[410px]">
+            </div>
+            <div class="min-w-full flex-shrink-0 snap-center">
+                <img src="assets/images/posts/church.jpg" alt="feed image" class="rounded-2xl w-[410px]">
+            </div>
+        </div>
+
+        <div class="pagination-dots flex justify-center mt-4 space-x-2">
+            <span class="dot w-2 h-2 bg-gray-400 rounded-full"></span>
+            <span class="dot w-2 h-2 bg-gray-400 rounded-full"></span>
+            <span class="dot w-2 h-2 bg-gray-400 rounded-full"></span>
+        </div>
+
+        <div class="flex justify-between py-2">
+            <div class="flex items-center gap-2">
+                <div class="flex items-center gap-1">
+                    <i class="fa-regular fa-heart text-red-500"></i>
+                    <p class="text-sm">76 likes</p>
+                </div>
+                <div class="flex items-center gap-1">
+                    <i class="fa-regular fa-comment text-green-800"></i>
+                    <p class="text-sm">6 comments</p>
+                </div>
+            </div>
+            <div>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+        </div>
+
+        <div class="-mx-5 bg-customGray2 px-5 rounded-t-2xl py-4 mb-[52px]">
+            <div class="flex justify-between items-center">
+                <p>VPhillips</p>
+                <p class="opacity-45 text-sm">8 hours ago</p>
+            </div>
+            <div>
+                <p class="opacity-45">This city is absolutely beautiful!</p>
+            </div>
+        </div>
+
+        <footer class="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-[450px] sm:w-[450px] flex justify-around items-center bg-white rounded-tl-xl rounded-tr-xl py-3 px-4">
+            <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M39.2 42L26.6 29.4C25.6 30.2 24.45 30.8333 23.15 31.3C21.85 31.7667 20.4667 32 19 32C15.3667 32 12.2917 30.7417 9.775 28.225C7.25833 25.7083 6 22.6333 6 19C6 15.3667 7.25833 12.2917 9.775 9.775C12.2917 7.25833 15.3667 6 19 6C22.6333 6 25.7083 7.25833 28.225 9.775C30.7417 12.2917 32 15.3667 32 19C32 20.4667 31.7667 21.85 31.3 23.15C30.8333 24.45 30.2 25.6 29.4 26.6L42 39.2L39.2 42ZM19 28C21.5 28 23.625 27.125 25.375 25.375C27.125 23.625 28 21.5 28 19C28 16.5 27.125 14.375 25.375 12.625C23.625 10.875 21.5 10 19 10C16.5 10 14.375 10.875 12.625 12.625C10.875 14.375 10 16.5 10 19C10 21.5 10.875 23.625 12.625 25.375C14.375 27.125 16.5 28 19 28Z"
+                      fill="black"/>
+            </svg>
+            <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 44V24H30V44M6 18L24 4L42 18V40C42 41.0609 41.5786 42.0783 40.8284 42.8284C40.0783 43.5786 39.0609 44 38 44H10C8.93913 44 7.92172 43.5786 7.17157 42.8284C6.42143 42.0783 6 41.0609 6 40V18Z"
+                      stroke="#FFAD15" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <a href="create.html">
+                <i class="fa-solid fa-circle-plus text-3xl animate-bounce" style="color: #134daa;"></i>
+            </a>
+            <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M44 24H32L28 30H20L16 24H4M44 24V36C44 37.0609 43.5786 38.0783 42.8284 38.8284C42.0783 39.5786 41.0609 40 40 40H8C6.93913 40 5.92172 39.5786 5.17157 38.8284C4.42143 38.0783 4 37.0609 4 36V24M44 24L37.1 10.22C36.7688 9.55357 36.2584 8.99274 35.6259 8.60056C34.9935 8.20838 34.2642 8.00039 33.52 8H14.48C13.7358 8.00039 13.0065 8.20838 12.3741 8.60056C11.7417 8.99274 11.2312 9.55357 10.9 10.22L4 24"
+                      stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M41.68 9.21999C40.6585 8.198 39.4456 7.38728 38.1107 6.83416C36.7758 6.28103 35.345 5.99634 33.9 5.99634C32.455 5.99634 31.0242 6.28103 29.6893 6.83416C28.3544 7.38728 27.1415 8.198 26.12 9.21999L24 11.34L21.88 9.21999C19.8166 7.15661 17.0181 5.99741 14.1 5.99741C11.1819 5.99741 8.38338 7.15661 6.31999 9.21999C4.25661 11.2834 3.09741 14.0819 3.09741 17C3.09741 19.9181 4.25661 22.7166 6.31999 24.78L24 42.46L41.68 24.78C42.702 23.7585 43.5127 22.5456 44.0658 21.2107C44.6189 19.8758 44.9036 18.445 44.9036 17C44.9036 15.555 44.6189 14.1242 44.0658 12.7893C43.5127 11.4544 42.702 10.2415 41.68 9.21999Z"
+                      stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </footer>
     </div>
 </div>
 
